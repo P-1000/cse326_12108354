@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio bonus</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Staatliches&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+.teste{
+    background-color: rebeccapurple;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    background: #BFD7E4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow: auto;
+}
+
+form{
+    padding: 0 6.4rem;
+    background-color: #FFFFFF;
+    max-width: 75rem;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 3.2rem;
+    border-radius:  2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    position: relative;
+    margin-bottom: 8rem;
+    
+}
+form div:first-child > fieldset legend{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 13.3rem;
+    background-color: #F67669;
+    border-radius:  2rem 2rem 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Staatliches',sans-serif;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    color: #FFFFFF;
+    border: 0;
+    
+}form div:first-child  > .input-wrapper:nth-child(2){
+    display: flex;
+    margin-top: 13rem;
+    flex-direction: row;
+    gap: 2.2rem;
+    
+}
+.fieldset-wrapper fieldset legend{
+    font-family: 'Staatliches',sans-serif;
+    font-style: 2.4rem;
+    line-height: 3.4rem;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #E6E6F0;
+    text-transform: uppercase;
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    font-size: 1.4rem;
+}
+.input-wrapper label{
+    color: #4E4958;
+}
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea{
+    width: 100%;
+    height: 5.6rem;
+    background: #FAFAFC;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    color: #4E4958;
+    line-height: 2.4rem;
+}
+.input-wrapper input:invalid,
+.input-wrapper select:invalid{
+    border: 1px solid rgb(207, 103, 103);
+}
+.input-wrapper select{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 50%;
+}
+.input-wrapper textarea{
+    height: 16.7rem;
+    padding: 1rem;
+    padding: 1rem;
+    color: #293241;
+    font-size: 1.6rem;
+}
+.check-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.check-wrapper input{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.input-wrapper label span{
+    font-size: 1.2rem;
+    color: #C1BCCC;
+    margin-left: 9px;
+}
+.input-wrapper label span:hover{
+    color: #292d33;
+}
+.fieldset-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+.event-day{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.event-day> div:nth-child(1){
+    width: 200%;
+}
+.fieldset-button{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.2rem;
+}
+.button{
+    max-width: 62.2rem;
+    height: 5.6rem;
+    width: 100%;
+    color: #FFFFFF;
+    background: #F67669;
+    border-radius: 8px;
+    font-family: 'Staatliches',sans-serif;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-bottom: 6.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+button:hover{
+    background: #d64b3c;
+    font-size: 2.2rem;
+    box-shadow: 2px 1px 10px 1px #C1BCCC;
+}
+
+</style>
+
+<body>
+   
+
+
+    <form id="event-form" action="home.html">
+        <div class="fieldset-wrapper">
+            <fieldset>
+                <legend>COLLABROTAE WITH US</legend>
+            </fieldset>
+            <div class="input-wrapper">
+
+                <div class="input-wrapper">
+                    <label for="first-name">Name</label>
+                    <input type="text" id="first-name" required>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" required>
+                </div>
+
+            </div>
+            <div class="input-wrapper">
+
+                <label for="event-email">Email</label>
+                <input type="email" id="evbent-email" required>
+
+            </div>
+        </div>
+
+        <div class="fieldset-wrapper">
+         
+
+            <div class="input-wrapper">
+                <label for="event-select">Select Type Of Collab</label>
+                <select id="event-select" required>
+                    <option value="hero-sanin">Partner Program</option>
+                    <option value="master">Advertise</option>
+                    <option value="gojo">Business</option>
+                </select>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="event-text">Write a brief Message</label>
+                <textarea id="event-text"></textarea>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="check-wrapper">
+                    <input type="checkbox" id="event-check" required>
+                    <label for="event-check">Agee to terms and conditions</label>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <div class="fieldset-button">
+
+               <div class="collll">
+                <input type="submit" value="COLLAB" class="button" id="bttn" onclick="acob()">
+                <a href="home.html" class="button">GO HOME</a>
+               </div>
+        </div>
+    </form>
+   
+<script>
+    
+    function acob(){
+        alert("THANK YOU FOR CONTACTING US WE WILL REACH YOU SOON!!")
+    }
+</script>
+<style>
+    .collll{
+        display: flex;
+       
+    }
+
+    .collll input {
+        display: inline-block; 
+        padding: 1.4em 2em; 
+    }
+    .collll a{
+        display: block;
+        box-sizing: border-box;
+        padding: 1.4em 2em;
+    }
+</style>
+</body>
+
+</html>
